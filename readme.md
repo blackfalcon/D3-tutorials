@@ -1,4 +1,4 @@
-#D3 - intro project
+#D3 - tutorials
 
 If you are new to D3, I can't recommend more reading [D3 Tutorials](http://alignedleft.com/tutorials/d3/) by Scott Murry.
 
