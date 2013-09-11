@@ -18,6 +18,11 @@
 
     </body>
     <script type="text/javascript">
+        // SVGs
+        // ----------------------------------------------
+
+        // Basic example to create random bar charts out of DIVs in the DOM
+        // ----------------------------------------------
         var dataset = [];
         for (var i = 0; i < 25; i++) {
             var newNumber = Math.round(Math.random() * 30);
@@ -28,12 +33,16 @@
             var barHeight = d * 5;
             return barHeight + "px";
           });
-        // d3.select("body").selectAll("p").data(dataset).enter().append("p").classed("bar", true)
-        //     .text(function(dataset) {
-        //         return "I can count up to " + dataset;
+
+        // Basic example that will write content to the DOM based on the array
+        // -------------------------------------------
+        // var dataset = [ 5, 10, 15, 20, 25 ];
+        // d3.select("body").selectAll("p").data(dataset).enter().append("p")
+        //     .text(function(d) {
+        //         return "I can count up to " + d;
         //     })
-        //     .style("color", function(dataset) {
-        //         if (dataset >= 15) {   //Threshold of 15
+        //     .style("color", function(d) {
+        //         if (d >= 15) {   //Threshold of 15
         //             return "red";
         //         } else {
         //             return "black";
