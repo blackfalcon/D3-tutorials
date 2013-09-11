@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.v3.min.js"></script>
+    </head>
+    <style type="text/css">
+        .bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;
+            margin-right: 2px;
+            background-color: teal;
+        }
+    </style>
+    <body>
+
+    </body>
+    <script type="text/javascript">
+        var dataset = [];
+        for (var i = 0; i < 25; i++) {
+            var newNumber = Math.round(Math.random() * 30);
+            dataset.push(newNumber);
+        }
+        d3.select("body").selectAll("div").data(dataset).enter().append("div").attr("class", "bar")
+          .style("height", function(d) {
+            var barHeight = d * 5;
+            return barHeight + "px";
+          });
+        // d3.select("body").selectAll("p").data(dataset).enter().append("p").classed("bar", true)
+        //     .text(function(dataset) {
+        //         return "I can count up to " + dataset;
+        //     })
+        //     .style("color", function(dataset) {
+        //         if (dataset >= 15) {   //Threshold of 15
+        //             return "red";
+        //         } else {
+        //             return "black";
+        //         }
+        //     });
+    </script>
+</html>
