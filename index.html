@@ -41,6 +41,9 @@
         .attr('width', calcWidth - barPadding)
         .attr('height', function(d) {
             return d * 4;
+        })
+        .attr('fill', function(d) {
+            return 'rgb('+ (d * 30) +', '+ (d * 5) +', 0)';
         });
 
         // SVGs
