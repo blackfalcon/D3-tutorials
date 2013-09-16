@@ -17,106 +17,11 @@
     <body>
 
     </body>
+    <script type="text/javascript" src="scripts/svg-bar-chart.js"></script>
+    <script type="text/javascript" src="scripts/svgs.js"></script>
+    <script type="text/javascript" src="scripts/basicDiv.js"></script>
+    <script type="text/javascript" src="scripts/basic.js"></script>
     <script type="text/javascript">
-        // Bar chart with SVGs
-        // ---------------------------------------------
-        var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
-                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
-
-        // Width and height
-        var w = 500;
-        var h = 100;
-        var calcWidth = w / dataset.length;
-        var barPadding = 1;
-
-        // create the SVG element
-        var svg = d3.select('body').append('svg').attr('width', w).attr('height', h);
-
-        svg.selectAll('rect').data(dataset).enter().append('rect').attr('x', function(d, i) {
-              return i * calcWidth;
-        })
-        .attr('y', function(d) {
-            return h - (d * 4);
-        })
-        .attr('width', calcWidth - barPadding)
-        .attr('height', function(d) {
-            return d * 4;
-        })
-        .attr('fill', function(d) {
-            return 'rgb(0, 0, ' + (d * 10) + ')';
-        });
-
-        svg.selectAll('text').data(dataset).enter()
-        .append('text')
-        .text(function(d) {
-            return d;
-        })
-        .attr('x', function(d, i) {
-            return i * calcWidth + (calcWidth - barPadding) / 2;
-        })
-        .attr('y', function(d, i) {
-            // return h - (d * 4) + 14;
-            return h - (d * 2) + 5;
-        })
-        .attr("text-anchor", "middle")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "11px")
-        .attr("fill", "white");
-
-        // SVGs
-        // ----------------------------------------------
-        // Width and height
-        // var w = 500;
-        // var h = 50;
-
-        // Data
-        // var dataset = [ 5, 10, 15, 20, 25 ];
-
-        // Create SVG Element
-        // var svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
-
-        // var circles = svg.selectAll("circle").data(dataset).enter().append("circle");
-
-        // circles.attr("cx", function(d, i) {
-        //         return (i * 50) + 25;
-        //     })
-        //     .attr("cy", h/2)
-        //     .attr("r", function(d) {
-        //         return d;
-        //     })
-        //     .attr("fill", "yellow")
-        //     .attr("stroke", "orange")
-        //     .attr("stroke-width", function(d) {
-        //         return d/2;
-        //     });
-
-
-        // Basic example to create random bar charts out of DIVs in the DOM
-        // ----------------------------------------------
-        // var dataset = [];
-        // for (var i = 0; i < 25; i++) {
-        //     var newNumber = Math.round(Math.random() * 30);
-        //     dataset.push(newNumber);
-        // }
-        // d3.select("body").selectAll("div").data(dataset).enter().append("div").attr("class", "bar")
-        //   .style("height", function(d) {
-        //     var barHeight = d * 5;
-        //     return barHeight + "px";
-        //   });
-
-        // Basic example that will write content to the DOM based on the array
-        // -------------------------------------------
-        // var dataset = [ 5, 10, 15, 20, 25 ];
-        // d3.select("body").selectAll("p").data(dataset).enter().append("p")
-        //     .text(function(d) {
-        //         return "I can count up to " + d;
-        //     })
-        //     .style("color", function(d) {
-        //         if (d >= 15) {   //Threshold of 15
-        //             return "red";
-        //         } else {
-        //             return "black";
-        //         }
-        //     });
+      // scripts go here
     </script>
 </html>
